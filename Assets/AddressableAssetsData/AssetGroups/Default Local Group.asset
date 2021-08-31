@@ -22,22 +22,22 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Beast
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 102900000, guid: 0ed18f8c9937b2048bdaa4fd00c34af8, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 0ed18f8c9937b2048bdaa4fd00c34af8, type: 3}
   - m_GUID: 122b0badce7dd1d4d9349d87d9928004
     m_Address: Assets/Sprites/Bug
     m_ReadOnly: 0
     m_SerializedLabels:
     - Bug
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 102900000, guid: 122b0badce7dd1d4d9349d87d9928004, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 122b0badce7dd1d4d9349d87d9928004, type: 3}
   - m_GUID: 35ccd96ea845d624a934157578a6265c
     m_Address: Assets/Sprites/Reptil
     m_ReadOnly: 0
     m_SerializedLabels:
     - Reptil
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 102900000, guid: 35ccd96ea845d624a934157578a6265c, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 35ccd96ea845d624a934157578a6265c, type: 3}
   - m_GUID: 63d3112639644b54d932f640c1fd572b
     m_Address: Assets/Sprites/Bird
     m_ReadOnly: 0
@@ -50,6 +50,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Fish
+    m_MainAsset: {fileID: 102900000, guid: 5ab6be600df969c4c8ac3326e852d850, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: 5ab6be600df969c4c8ac3326e852d850, type: 3}
+  - m_GUID: 2d99e827d96812f4e92d12514267d5dc
+    m_Address: Assets/Sprites/Plant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Plant
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0

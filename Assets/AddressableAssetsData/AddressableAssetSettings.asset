@@ -75,6 +75,7 @@ MonoBehaviour:
     - Reptil
     - Bird
     - Fish
+    - Plant
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 82a469483d73fe041bbf8aa3a7415859, type: 2}
