@@ -39,6 +39,7 @@ public class CardsManager : MonoBehaviour
             axiecardobj.effect = card.effect;
             axiecardobj.BodyName = card.bodyname;
             axiecardobj.axietype = card.axietype;
+            axiecardobj.Imageurl = card.Imageurl;
             axiecardobj.Init();
             yield return null;
         }
