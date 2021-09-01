@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class LoadingView : MonoBehaviour
 {
-    [SerializeField] private GameObject CardsView, LoadindView;
+    [SerializeField] private GameObject CardsView, LoadindView, FilterPanel;
     [SerializeField] private Image LoadingBar;
 
     private CardsManager cardsManager;
@@ -12,6 +12,7 @@ public class LoadingView : MonoBehaviour
     public static Action<float> UpdateProgressbar;
      void Awake()
      {
+         FilterPanel.SetActive(false);
          cardsManager = CardsView.GetComponent<CardsManager>();
          OnLoadingComplete += HideView;
          UpdateProgressbar += ProgressbarFill;
@@ -27,5 +28,6 @@ public class LoadingView : MonoBehaviour
      private void HideView()
      {
          LoadindView.SetActive(false);
+         FilterPanel.SetActive(true);
      }
 }

@@ -10,13 +10,16 @@ using System.Linq;
 public class CardsManager : MonoBehaviour
 {
     public GameObject prefab;
-    public Transform container; 
-    List<AxieCard> AxieCards;
-    private string dataPath;
+    public Scrollbar scrollbar;
+    public Transform container;
+    public CardFilter filter; 
+    public List<AxieCard> AxieCards;
+    public List<GameObject> AxieCardObj;
     public IEnumerator Init(Action OnComplete)
     {
         yield return GetJsonData();
         yield return CardsCreation();
+        scrollbar.value = 1;
         OnComplete();
     }
     public IEnumerator GetRequest(string url, Action<UnityWebRequest> callback)
@@ -48,16 +51,20 @@ public class CardsManager : MonoBehaviour
         foreach(AxieCard card in AxieCards)
         {
             var cardobj = Instantiate(prefab, container);
+            AxieCardObj.Add(cardobj);
             var axiecardobj = cardobj.GetComponent<AxieCardPrefab>();
             axiecardobj.BodyName = card.bodyname;
             axiecardobj.CardName = card.name;
-            axiecardobj.EnergyCost = card.energycost.ToString();
-            axiecardobj.Attack = card.attack.ToString();
-            axiecardobj.Shield = card.shield.ToString();
+            axiecardobj.EnergyCost = card.energycost;
+            axiecardobj.Attack = card.attack;
+            axiecardobj.Shield = card.shield;
+            axiecardobj.AttackType = card.attacktype;
             axiecardobj.effect = card.effect;
             axiecardobj.BodyName = card.bodyname;
+            axiecardobj.bodypart = card.bodypart;
             axiecardobj.axietype = card.axietype;
             axiecardobj.Imageurl = card.Imageurl;
+            axiecardobj.OnClick += filter.StopAutoScroll;
             yield return axiecardobj.Init();
             CardsReady++;
             LoadingView.UpdateProgressbar(CardsReady / totalcards);

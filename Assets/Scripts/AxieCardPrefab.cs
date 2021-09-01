@@ -1,10 +1,12 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using  TMPro;
 using UnityEngine.Networking;
+using UnityEngine.EventSystems;
 
-public class AxieCardPrefab : MonoBehaviour
+public class AxieCardPrefab : MonoBehaviour, IPointerDownHandler
 {
     public TMP_Text BodyName_TMP;
     public TMP_Text CardName_TMP;
@@ -15,19 +17,22 @@ public class AxieCardPrefab : MonoBehaviour
     public Image CardImage;
     public axieType axietype;
     public string BodyName;
+    public string bodypart;
     public string CardName;
-    public string EnergyCost;
-    public string Attack;
-    public string Shield;
+    public int EnergyCost;
+    public int Attack;
+    public int Shield;
+    public attackType AttackType;
     public string effect;
     public string Imageurl;
+    public Action OnClick;
     public IEnumerator Init()
     {
         BodyName_TMP.text = BodyName;
         CardName_TMP.text = CardName;
-        EnergyCost_TMP.text = EnergyCost;
-        Attack_TMP.text = Attack;
-        Shield_TMP.text = Shield;
+        EnergyCost_TMP.text = EnergyCost.ToString();
+        Attack_TMP.text = Attack.ToString();
+        Shield_TMP.text = Shield.ToString();
         effect_TMP.text = effect;
         yield return ImageDownload(Imageurl);
     }
@@ -50,4 +55,8 @@ public class AxieCardPrefab : MonoBehaviour
         }
          www.Dispose();
      }
+     public void OnPointerDown(PointerEventData eventData)
+    {
+        OnClick();
+    }
 }
