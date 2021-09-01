@@ -14,19 +14,19 @@ public class AxieCard
     public string effect;
     public axieType axietype;
     public string Imageurl;
-    public AxieCard(string name, string bodyname, string bodypart, int energycost, attackType attacktype, int attack, int shield, string effect, axieType axietype, string Imageurl)
-    {
-        this.name = name;
-        this.bodyname = bodyname;
-        this.bodypart = bodypart;
-        this.energycost = energycost;
-        this.attacktype = attacktype;
-        this.attack = attack;
-        this.shield = shield;
-        this.effect = effect;
-        this.axietype = axietype;
-        this.Imageurl = Imageurl;
-    }
+    // public AxieCard(string name, string bodyname, string bodypart, int energycost, attackType attacktype, int attack, int shield, string effect, axieType axietype, string Imageurl)
+    // {
+    //     this.name = name;
+    //     this.bodyname = bodyname;
+    //     this.bodypart = bodypart;
+    //     this.energycost = energycost;
+    //     this.attacktype = attacktype;
+    //     this.attack = attack;
+    //     this.shield = shield;
+    //     this.effect = effect;
+    //     this.axietype = axietype;
+    //     this.Imageurl = Imageurl;
+    // }
 }
 public enum axieType
 {
